@@ -1,3 +1,5 @@
+![e5](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/29190a6f-166f-4bb9-9700-c31ac10a13ae)
+![e9](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/94e0c3eb-5bdb-4ca9-926f-0adfad647ebf)
 # AI-brain-tumor-classification
 # BraTum Scans -- Brain Tumor Classification using MobileNet-v2
 ## 1 SCOPE
@@ -86,6 +88,28 @@ Some corrected predicted images by model are as follow;
 ![e4](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/94d2c5c1-13b6-4337-91c7-e01c18b482bf)
 <br />
 #### 3.6.2 EXPLAIANBLE AI ON SEGREGATED DATASET
+##### 3.6.2.1 TOP-ANGLE DATASET
+Model on testing classify few images as false negative  For example image  below belongs to meningioma_tumor which model classified as no_tumor.
+![e5](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/54639fc3-d100-4be9-b7d6-507dbb647b61)
+Some correctly predicted images by model are as follow;
+![e6](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/fc64a0b8-a0a3-42be-a7ac-9ef8c1d6e858)
+##### 3.6.2.2 BACK_ANGLE DATASET
+This model does not classify any image as false negative. 
+Some of the correctly predicted images by model are as follow;
+![e7](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/d433ef22-ceb3-40f2-957f-5ffee60d1be5)
+##### 3.6.2.3 LEFT_ANGLE DATASET
+This model does not classify any image as false negative. 
+Some of the correctly predicted images by model are as follow;
+![e8](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/4b41f639-7f8e-4753-8419-9a5655769b88)
+model also predicted some images into classes different than their actual class like;
+![e9](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/f1893b54-ce8c-46ef-b1c3-a8d9139d0864)
+#### 3.7 POINTS ON EXPLAINABLE AI RESULTS 
+ In above models mostly meningioma_tumor is classified as no_tumor (false negative). Models are getting confused in detecting meningioma_tumor correctly in some of images particularly top angle images. Correct classification depends on the area model is capturing for feature learning. In ideal situation, model should look to meninges, glioma and pituitary region of brain to classify these images. To some extend models learned accurate features according to my understanding. In case of left angle I think model is not learning the features of pituitary_left_angle accurately. Although it is classifying images into correct class but according to my perception model learned wrong features during training and classify test images accordingly.
+ #### CONCLUSION
+ In conclusion, our brain tumor classification project has successfully utilized a combination of cutting-edge techniques to achieve commendable results. By employing data augmentation, we expanded the diversity of our training dataset, enhancing the model's ability to generalize and accurately classify brain tumors across various scenarios. The incorporation of the MobileNetV2 model, known for its efficiency and effectiveness, proved pivotal in maintaining a balance between computational resources and accuracy. Furthermore, the integration of explainable AI methodologies empowered us to gain insights into the decision-making process of the model, ensuring transparency and accountability in its predictions. Appreciable accuracy has been achieved in the project. In explainable AI implementation, it came to know that for pituitary_Tumor_Left_Angle model has learned wrong feature although it is classifying images into right class but features learned by model are not features for tumor that may cause issue if we give it a unseen images. This part of project require some more investigation and working.
+
+
+
 
 
 
