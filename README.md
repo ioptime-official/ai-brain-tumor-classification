@@ -31,18 +31,22 @@ Random brightness augmentation is a data augmentation technique commonly used in
 Random brightness and contrast augmentation are two distinct data augmentation techniques commonly employed in image processing and computer vision tasks to enhance the diversity and quality of training data for machine learning models.By applying both random brightness and contrast augmentation, machine learning models become more resilient to changes in lighting conditions and are better equipped to recognize important features regardless of how the image is captured. These techniques contribute to reducing overfitting, enhancing generalization, and improving the model's performance on real-world data. When combined with other augmentation techniques such as rotation, scaling, and flipping, random brightness and contrast augmentation form a comprehensive strategy for creating a diverse and representative training dataset that helps build more robust and accurate models.
 ![aug3](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/32d8e471-31d2-405c-9806-de78f69d750a)
 <br />
-
-
-
-In my Brain Tumor Classification project(BraTum Scans), I embarked on a comprehensive journey to construct an advanced neural network model that can effectively distinguish between different types of brain tumors. To begin, I accessed a high-quality dataset from Kaggle, containing a diverse range of brain images representing various tumor categories. To enhance the robustness of the model, I applied data preprocessing techniques such as data augmentation like CLahe, Random Brightness, Random BrightnessandContrast. As example is shown below;
+### 3.3 MODEL ARCHITECTURE:
+MobileNet-V2 has been selected for brain tumor classifciation project because of it's efficiency and less computer sources utility.Mobilenet-V2 model has been used in this project of brain tumor classification. MobileNet v2 is a lightweight convolutional neural network (CNN) architecture that is designed for efficient computation on mobile and embedded devices. It uses depth-wise separable convolutions and residual connections to reduce the number of parameters and improve the performance of the network. MobileNet is used for feature extraction, which means it is responsible for identifying key features in the input image that can be used for object detection.
+![model](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/950254ab-4b65-460e-9b22-9afa56f47d5c)
 <br />
+### 3.4 TRAINING LOOP:
+After data augmentation training of model started. This project include four datasets which are combined dataset, top angle data set, left angle data set and back angle dataset which further have their own training, validation and testing sets.. So training has to be done for each dataset's training set  individually. Models are trained on 30 epochs. After training the models comes the step of validation. models are being validated on validation set of respective dataset. After validation models are being tested.
+### 3.5 TESTING
+After training and validation models are being saved and then reloaded for proper testing. Results got after testing are mentioned in next section. test accuracy should be compared with validation accuracy to interpret the working of models.
+#### 3.5.1 RESULTS
+##### 3.5.1.1 MODEL ON COMBINED DATASET
+I trained Mobilenet-v2 model on combined dataset that contain main classes glioma_tumor, meningioma_tumor, no_tumor and pituitary_tumor. I trained the model at 30 Epoch. After I validated the model on validation set. After this I tested the model on testing set to check accuracy of model. I got the following results;
+Train Loss: 0.0781 | Train Acc: 0.9755
+Valid Loss: 1.0393 | Valid Acc: 0.8451
+Test Accuracy: 92.97%
+Test Loss: 0.3987
+![cm1](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/a786497e-8835-471a-9542-10e16ceb6d0d)
+##### 3.5.1.2 SEGREGATED DATASETS
+###### 3.5.1.2.1 TOP_ANGLE_DATASET
 
-![Rb](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/338274db-f6e6-48e8-82bc-69d1aa037552)
-
-<br />
-I opted for the MobileNetV2 architecture, known for its efficiency and accuracy in image classification tasks. After constructing the model architecture, I undertook a rigorous training phase using the preprocessed dataset.Following training, I  evaluated the model's performance using dedicated validation datasets. By analyzing metrics such as accuracy, precision, recall, and F1-score, I gained insights into the model's strengths and weaknesses. Notably, the model showcased impressive accuracy in classifying different types of brain tumors, showcasing its potential clinical significance.To delve further into the inner workings of the model and its decision-making process, I integrated Grad-CAM (Gradient-weighted Class Activation Mapping). This cutting-edge technique allowed me to visualize which areas of the brain images were crucial in influencing the model's predictions. The overlay of these activation maps on the original images provided a form of "explainable AI," giving valuable insights into the model's decision rationale and aiding medical practitioners in understanding its decisions.Example image is shown below;
-<br />
-
-![eai2](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/960dd473-81d8-4f2c-b1d7-639cf3408019)
-
-<br />
