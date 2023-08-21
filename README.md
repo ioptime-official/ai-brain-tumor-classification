@@ -49,4 +49,47 @@ Test Loss: 0.3987
 ![cm1](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/a786497e-8835-471a-9542-10e16ceb6d0d)
 ##### 3.5.1.2 SEGREGATED DATASETS
 ###### 3.5.1.2.1 TOP_ANGLE_DATASET
+In this dataset images taken from top angle for each tumor are present into different sub classes like glioma_Tumor_Top_Angle , meningioma_tumor_Top_Angle and so on. It further consist of training , validation and testing set. I trained the model at 30 Epoch. After I validated the model on validation set. After this I tested the model on testing set to check accuracy of model. I got the following results;
+Train Loss: 0.0103 | Train Acc: 0.9965
+Valid Loss: 0.7859 | Valid Acc: 0.8511
+Test Accuracy: 87.02%
+Test Loss: 0.7121
+![cm2](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/910b8003-9357-4998-83f4-210925b6ae9b)
+<br />
+###### 3.5.1.2.2 BACK ANGLE DATASET
+In this dataset images taken from Back angle for each tumor are present into different sub classes like glioma_Tumor_Back_Angle , meningioma_tumor_Back_Angle and so on. It further consist of training , validation and testing set. I trained the model at 30 Epoch. After I validated the model on validation set. After this I tested the model on testing set to check accuracy of model. I got the following results;
+Train Loss: 0.0031 | Train Acc: 1.0000
+Valid Loss: 0.2240 | Valid Acc: 0.9427
+Test Accuracy: 94.74%
+Test Loss: 0.2796
+![cm3](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/c70fba72-76c2-429d-9279-5928bfd9e926)
+<br />
+###### 3.5.1.2.3 LEFT ANGLE DATASET
+In this dataset images taken from Left angle for each tumor are present into different sub classes like glioma_Tumor_Left_Angle , meningioma_tumor_Left_Angle and so on. It further consist of training , validation and testing set. I trained the model at 30 Epoch. After I validated the model on validation set. After this I tested the model on testing set to check accuracy of model. I got the following results;
+Train Loss: 0.0005 | Train Acc: 1.0000
+Valid Loss: 0.7610 | Valid Acc: 0.8827
+Test Accuracy: 92.78%
+Test Loss: 0.2037
+![cm4](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/8ab0f234-c484-47a7-b69f-2577da30031e)
+<br />
+### 3.6 EXPLAINABLE AI
+Explainable AI, often abbreviated as XAI, refers to the capability of artificial intelligence systems to provide understandable and transparent explanations for their decisions and actions. In complex machine learning models, like deep neural networks, the decision-making process can be challenging to interpret, leading to concerns about trust, accountability, and bias. Explainable AI aims to bridge this gap by enabling users, including both developers and end-users, to comprehend why a particular AI model arrived at a specific outcome. By offering insights into the factors and features that influenced a decision, explainable AI enhances transparency, facilitates model debugging and validation, and ensures that AI applications are used responsibly and ethically across various domains, including healthcare, finance, and autonomous systems. I applied explainable AI o my model to get the better understanding of how model is learning the features.
+some results are as fellow;
+#### 3.6.1 EXPLAINABLE AI ON COMBINED DATASET:
+According to confusion matrix  of combined dataset mentioned above  there are five false negative in this model testing process all these belongs to meningioma_tumor class which model has predicted as no_tumor. After applying explainable AI I got the following heat maps;
+![e1](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/497a3089-90dd-428e-aa6b-cc7d6b79a8ea)
+Let’s compare them with the correctly predicted image;
+![e2](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/f28fb1a8-525a-4236-9367-9dd648a35e52)
+As model predicted some of meningioma_tumor images into other classes;
+![e3](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/2a76091d-d9b9-4832-8ec8-be625cead6ca)
+Some corrected predicted images by model are as follow;
+![e4](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/94d2c5c1-13b6-4337-91c7-e01c18b482bf)
+<br />
+#### 3.6.2 EXPLAIANBLE AI ON SEGREGATED DATASET
+
+
+
+
+
+
 
