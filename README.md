@@ -1,5 +1,4 @@
-![e5](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/29190a6f-166f-4bb9-9700-c31ac10a13ae)
-![e9](https://github.com/ioptime-official/ai-brain-tumor-classification/assets/138657622/94e0c3eb-5bdb-4ca9-926f-0adfad647ebf)
+
 # AI-brain-tumor-classification
 # BraTum Scans -- Brain Tumor Classification using MobileNet-v2
 ## 1 SCOPE
